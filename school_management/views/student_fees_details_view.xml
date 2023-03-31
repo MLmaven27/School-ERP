@@ -58,6 +58,7 @@
 					<group>
 						<field name="student_id"/>
 						<field name="date"/>
+						<field name="fees_term_id" />
 						<field name="amount"/>
 						<!-- <field name="invoice_id"/> -->
 						<field name="state"/>

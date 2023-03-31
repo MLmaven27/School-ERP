@@ -7,7 +7,8 @@ class StudentFeesDetails(models.Model):
 	_description = "Student Fees Details"
 	_rec_name = 'student_id'
 
-	fees_line_id = fields.Many2one('student.fees.terms.line', string='Fees Line')
+	fees_line_id = fields.Many2one('student.fees.terms.line', string='Fees Term Line')
+	fees_term_id = fields.Many2one('student.fees.terms', string='Fees Terms')
 	invoice_id = fields.Many2one('account.move', string='Invoice ID')
 	amount = fields.Monetary(string='Fees Amount', currency_field='currency_id', required=True)
 	date = fields.Date(string='Submit Date', required=True)
