@@ -1,4 +1,14 @@
 <odoo>
+
+	<!-- fa-user-o -->
+
+	<template id="user_dropdown" inherit_id="portal.user_dropdown">
+		<xpath expr="//div[hasclass('dropdown-divider')]" position="after">
+			<a groups="base.group_user" href="/my/students" role="menuitem" class="dropdown-item ps-3">
+				<i class="fa fa-user-o small text-muted" style="padding-left:5px;"/>   School Profile
+			</a>
+		</xpath>
+	</template>
 	
 	<template id="portal_my_home" inherit_id="portal.portal_my_home">
 		<xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
@@ -13,7 +23,7 @@
 	<template id="portal_my_home_menu_students" inherit_id="portal.portal_breadcrumbs">
 		<xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
 			<li t-attf-class="breadcrumb-item" t-if="page_name == 'student_profile_list_view'">
-				<a href="/my">Students</a></li>
+				<b>Students</b></li>
 			<li t-attf-class="breadcrumb-item" t-if="page_name == 'student_form_view'">
 				<a href="/my/students">Students</a>
 			</li>           
